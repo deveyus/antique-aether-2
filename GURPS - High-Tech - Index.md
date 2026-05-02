@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 With rare exceptions,
 weaponry is not listed in this
 index. Instead, it has its own

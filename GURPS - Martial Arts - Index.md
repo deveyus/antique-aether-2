@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 With rare exceptions, weapons are
 not listed in this index. Instead, they
 have their own alphabetical glossary.

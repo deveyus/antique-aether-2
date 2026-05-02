@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 2+1 drill,15-16.
 .50-caliber legalities,5.
 Accessories, adding, 68.

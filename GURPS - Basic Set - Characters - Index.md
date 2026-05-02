@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 This index covers both books of the
 Basic  Set.  The  pages  are  sequentially
 numbered; Book 2 starts on p. 337.

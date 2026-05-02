@@ -1,3 +1,7 @@
+---
+nav_exclude: true
+---
+
 Advantage-based magic, 201.
 Aging elixir, 214.
 Air spells, 23.

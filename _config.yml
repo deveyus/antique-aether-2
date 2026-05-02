@@ -1,0 +1,14 @@
+title: Antique Aether
+baseurl: ""
+url: ""
+markdown: kramdown
+permalink: pretty
+
+collections: []
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default

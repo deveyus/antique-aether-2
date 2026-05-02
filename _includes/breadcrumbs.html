@@ -1,0 +1,16 @@
+{% if page.url == "/" %}
+  <span>Home</span>
+{% else %}
+  <a href="/">Home</a>
+  {% if page.parent and page.parent != "/" %}
+    {% assign parent_item = site.pages | where: "permalink", page.parent | first %}
+    {% if parent_item %}
+      &raquo; <a href="{{ parent_item.url }}">{{ parent_item.title }}</a>
+    {% else %}
+      &raquo; <a href="{{ page.parent }}">{{ page.parent }}</a>
+    {% endif %}
+  {% endif %}
+  {% if page.title %}
+    &raquo; <span>{{ page.title }}</span>
+  {% endif %}
+{% endif %}
