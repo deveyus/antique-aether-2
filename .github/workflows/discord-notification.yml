@@ -50,9 +50,10 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
         run: |
-          python3 - <<'PY' > /tmp/discord_payload.json
-import json, os
-content = "**Changes:**\n" + os.environ.get("COMMIT_MESSAGE", "") + "\n\nhttps://deveyus.github.io/antique-aether/AntiqueAetherNotes"
-print(json.dumps({"content": content}))
-PY
+          python3 -c "
+          import json, os
+          content = '**Changes:**\n' + os.environ.get('COMMIT_MESSAGE', '') + '\n\nhttps://deveyus.github.io/antique-aether/AntiqueAetherNotes'
+          with open('/tmp/discord_payload.json', 'w') as f:
+              json.dump({'content': content}, f)
+          "
           curl -H "Content-Type: application/json" -d @/tmp/discord_payload.json "$DISCORD_WEBHOOK"
