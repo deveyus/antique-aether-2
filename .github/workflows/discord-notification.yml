@@ -55,7 +55,7 @@ jobs:
           commit_msg = os.environ.get('COMMIT_MESSAGE', '')
           if not commit_msg:
               commit_msg = 'Manual workflow dispatch'
-          content = '**Changes:**\n' + commit_msg + '\n\nhttps://deveyus.github.io/antique-aether/AntiqueAetherNotes'
+          content = '**Changes:**\n' + commit_msg + '\n\nhttps://deveyus.github.io/antique-aether-2/'
           with open('/tmp/discord_payload.json', 'w') as f:
               json.dump({'content': content}, f)
           "
