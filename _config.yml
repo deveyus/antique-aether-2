@@ -1,10 +1,13 @@
 title: Antique Aether
-baseurl: ""
-url: ""
+baseurl: "/antique-aether-2"
+url: "https://deveyus.github.io"
 markdown: kramdown
 permalink: pretty
 
-collections: []
+collections:
+  worlds:
+    output: true
+    permalink: /worlds/:path/
 
 defaults:
   - scope:
