@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'en-US' }}">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   </head>
   <body>
-    <header>
+    <div class="container-lg px-3 my-5 markdown-body">
       <nav class="breadcrumbs">
         {% include breadcrumbs.html %}
       </nav>
-      <h1>{{ page.title }}</h1>
-    </header>
-    <main>
+      {% if page.title and page.url != "/" %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
       {{ content }}
-    </main>
+    </div>
   </body>
 </html>
